@@ -1,17 +1,18 @@
 calls = 0
 def count_calls():
-    print(calls)
-
-def string_info(string_):
     global calls
     calls += 1
+
+
+def string_info(string_):
+    count_calls()
     n = len(string_)
     m = string_.upper()
     q = string_.lower()
     return n, m, q
 
 
-i = string_info("proba")
+i = string_info("rumpelshtirltzhen")
 print(i)
 i = string_info("demobilizacya")
 print(i)
@@ -20,8 +21,7 @@ s = "urban"
 l = ["potato", "tomato", "URBAN"]
 
 def is_contains(s, l):
-    global calls
-    calls += 1
+    count_calls()
     if s.lower() in (item.lower() for item in l):
         print(True)
     else:
@@ -29,6 +29,6 @@ def is_contains(s, l):
 
 
 is_contains(s, l)
+print(calls)
 
 
-count_calls()
