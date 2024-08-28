@@ -23,9 +23,9 @@ l = ["potato", "tomato", "URBAN"]
 def is_contains(s, l):
     count_calls()
     if s.lower() in (item.lower() for item in l):
-        print(True)
+        return True
     else:
-        print(False)
+        return False
 
 
 is_contains(s, l)
